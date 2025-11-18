@@ -5,7 +5,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Text, OrbitControls } from '@react-three/drei'
 
 function BarraDeDato(props: any) {
-    const meshRef = useRef<any>()
+    const meshRef = useRef<any>(null)
     const [hovered, setHover] = useState(false)
 
     useFrame((state, delta) => (meshRef.current.rotation.y += delta))
